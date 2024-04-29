@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>Filter_in_Servlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <display-name>PancardValidator</display-name>
+    <filter-name>PancardValidator</filter-name>
+    <filter-class>pack.PancardValidator</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PancardValidator</filter-name>
+    <url-pattern>/PancardValidator</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PanValidatorServlet</display-name>
+    <servlet-name>PanValidatorServlet</servlet-name>
+    <servlet-class>pack.PanValidatorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PanValidatorServlet</servlet-name>
+    <url-pattern>/PanValidatorServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>SecondPancardValidator</display-name>
+    <filter-name>SecondPancardValidator</filter-name>
+    <filter-class>pack.SecondPancardValidator</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SecondPancardValidator</filter-name>
+    <url-pattern>/SecondPancardValidator</url-pattern>
+  </filter-mapping>
+</web-app>
